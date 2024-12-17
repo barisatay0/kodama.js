@@ -1,14 +1,14 @@
 const {DataTypes} = require('sequelize');
-const {sequelize} = require('../../config/database');
+const {sequelize} = require('../../config/Database');
 
-const City = sequelize.define('City',
+const Model = sequelize.define('Model',
     {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true,
         },
-        city_name: {
+        name: {
             type: DataTypes.STRING,
             allowNull: true,
             unique: true,
@@ -16,10 +16,10 @@ const City = sequelize.define('City',
     },
     {
         timestamps: true,
-        tableName: 'tb_city',
+        tableName: '//',
         createdAt: 'created_at',
         updatedAt: 'updated_at',
     },
 );
 
-module.exports = {City};
+module.exports = {Model};
