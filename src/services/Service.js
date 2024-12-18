@@ -1,28 +1,23 @@
-const {//} = require('../Models');
-const {Op} = require("sequelize");
+const {variable} = require('../models');
 
 async function index() {
-    return await //.findAll();
+    return await variable.findAll();
 }
 
 async function create(data) {
-    return //.create(data);
+    return variable.create(data);
 }
 
 async function read(data) {
-    return //.findByPk(data.id);
+    return variable.findByPk(data.id);
 }
 
 async function update(data) {
-    return //.update(data, {where: {id: data.id}});
+    return variable.update(data, {where: {id: data.id}});
 }
 
 async function remove(data) {
-    return //.destroy({where: {id: data.id}});
+    return variable.destroy({where: {id: data.id}});
 }
 
-async function search(data) {
-    return //.findAll({where: {name: {[Op.like]: `%${data}%`}}});
-}
-
-module.exports = {index, create, read, update, remove, search};
+module.exports = {index, create, read, update, remove};

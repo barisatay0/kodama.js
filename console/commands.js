@@ -14,6 +14,9 @@ if (command === 'create' && subcommand === 'model') {
     CreateModel(name);
 }
 
+if (command === 'create' && subcommand === 'service') {
+    CreateService(name);
+}
 
 function CreateController(name){
     const Controller = path.join(__dirname, `../src/controllers/Controller.js`);
@@ -60,3 +63,24 @@ function CreateModel(name){
     console.log(`Success: Model ${name} created successfully at ${CheckModel}`);
 }
 
+function CreateService(name){
+    const Service = path.join(__dirname, `../src/services/Service.js`);
+    const CheckService = path.join(__dirname, `../src/services/${name}.js`);
+
+    if (fs.existsSync(CheckService)) {
+        console.error(`Service ${name} already exists at ${CheckService}`);
+        process.exit(1);
+    }
+    if (!fs.existsSync(Service)) {
+        console.error(`Example file not found: ${Model}`);
+        process.exit(1);
+    }
+
+    const template = fs.readFileSync(Service, 'utf-8');
+    const content = template
+        .replace(/variable/g, name)
+        .replace(/variant/g, name.toLowerCase());
+
+    fs.writeFileSync(CheckService, content, 'utf-8');
+    console.log(`Success: Model ${name} created successfully at ${CheckService}`);
+}
