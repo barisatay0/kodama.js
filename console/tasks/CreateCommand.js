@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-function CreateCommand(name){
-    const Command = path.join(__dirname, `./Command`);
+function CreateCommand(name) {
+    const Command = path.join(__dirname, `./Command.js`);
     const CheckCommand = path.join(__dirname, `./${name}.js`);
 
     if (fs.existsSync(CheckCommand)) {
@@ -14,13 +14,14 @@ function CreateCommand(name){
         process.exit(1);
     }
 
-    const template = fs.readFileSync(Model, 'utf-8');
+    const template = fs.readFileSync(Command, 'utf-8');
     const content = template
         .replace(/variable/g, name)
         .replace(/variant/g, name.toLowerCase());
 
     fs.writeFileSync(CheckCommand, content, 'utf-8');
     console.log(`Success: Model ${name} created successfully at ${CheckCommand}`);
+
 }
 
 module.exports = CreateCommand;
