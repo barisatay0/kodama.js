@@ -72,7 +72,7 @@ function CreateService(name){
         process.exit(1);
     }
     if (!fs.existsSync(Service)) {
-        console.error(`Example file not found: ${Model}`);
+            console.error(`Example file not found: ${Service}`);
         process.exit(1);
     }
 
