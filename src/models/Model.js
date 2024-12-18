@@ -16,7 +16,7 @@ const Model = sequelize.define('Model',
     },
     {
         timestamps: true,
-        tableName: '//',
+        tableName: '',
         createdAt: 'created_at',
         updatedAt: 'updated_at',
     },
