@@ -19,5 +19,3 @@ if (command === 'create' && subcommand === 'service') {
 if (command === 'create' && subcommand === 'command') {
     CreateCommand(name);
 }
-
-
