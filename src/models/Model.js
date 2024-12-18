@@ -1,7 +1,7 @@
 const {DataTypes} = require('sequelize');
 const {sequelize} = require('../../config/Database');
 
-const Model = sequelize.define('Model',
+const variable = sequelize.define('variable',
     {
         id: {
             type: DataTypes.INTEGER,
@@ -16,10 +16,10 @@ const Model = sequelize.define('Model',
     },
     {
         timestamps: true,
-        tableName: '',
+        tableName: 'variant_tb',
         createdAt: 'created_at',
         updatedAt: 'updated_at',
     },
 );
 
-module.exports = {Model};
+module.exports = {variable};

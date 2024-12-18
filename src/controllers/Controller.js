@@ -1,4 +1,4 @@
-const {index, create, read, update, remove, search} = require('../services/');
+const {index, create, read, update, remove} = require('../services/variableService');
 
 async function indexController(req, res) {
     try {
@@ -53,21 +53,10 @@ async function removeController(req, res) {
     }
 }
 
-async function searchController(req, res) {
-    try {
-        const variant = await search(req.body);
-        return res.status(200).json({status: 200, message: 'Success', data: variant});
-    } catch (error) {
-        console.log('readController Error', error);
-        return res.status(500).json({message: 'An error occurred while trying to show Controller ', error: error.message});
-    }
-}
-
 module.exports = {
     indexController,
     createController,
     readController,
     updateController,
-    removeController,
-    searchController
+    removeController
 };
