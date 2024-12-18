@@ -20,8 +20,7 @@ function CreateCommand(name) {
         .replace(/variant/g, name.toLowerCase());
 
     fs.writeFileSync(CheckCommand, content, 'utf-8');
-    console.log(`Success: Model ${name} created successfully at ${CheckCommand}`);
-
+    console.log(`Success: Command ${name} created successfully at ${CheckCommand}`);
 }
 
 module.exports = CreateCommand;

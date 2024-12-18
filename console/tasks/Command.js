@@ -1,26 +1,26 @@
 const fs = require('fs');
 const path = require('path');
 
-function CreateModel(name){
-    const Model = path.join(__dirname, `../../src/models/Model.js`);
-    const CheckModel = path.join(__dirname, `../../src/models/${name}.js`);
+function Createvariable(name){
+    const variable = path.join(__dirname, `../../src/models/variable.js`);
+    const Checkvariable = path.join(__dirname, `../../src/models/${name}.js`);
 
-    if (fs.existsSync(CheckModel)) {
-        console.error(`Model ${name} already exists at ${CheckModel}`);
+    if (fs.existsSync(Checkvariable)) {
+        console.error(`Model ${name} already exists at ${Checkvariable}`);
         process.exit(1);
     }
-    if (!fs.existsSync(Model)) {
-        console.error(`Example file not found: ${Model}`);
+    if (!fs.existsSync(variable)) {
+        console.error(`Example file not found: ${variable}`);
         process.exit(1);
     }
 
-    const template = fs.readFileSync(Model, 'utf-8');
+    const template = fs.readFileSync(variable, 'utf-8');
     const content = template
         .replace(/variable/g, name)
         .replace(/variant/g, name.toLowerCase());
 
-    fs.writeFileSync(CheckModel, content, 'utf-8');
-    console.log(`Success: Model ${name} created successfully at ${CheckModel}`);
+    fs.writeFileSync(Checkvariable, content, 'utf-8');
+    console.log(`Success: variable ${name} created successfully at ${Checkvariable}`);
 }
 
-module.exports = CreateModel;
+module.exports = Createvariable;
