@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const {CreateController, CreateModel, CreateService, CreateCommand} = require('./tasks');
+const {CreateController, CreateModel, CreateService, CreateCommand} = require('./create');
 const args = process.argv.slice(2);
 const command = args[0];
 const subcommand = args[1];
