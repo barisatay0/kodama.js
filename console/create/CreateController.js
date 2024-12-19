@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 function CreateController(name){
-    const Controller = path.join(__dirname, `../../src/controllers/Controller.js`);
-    const CheckController = path.join(__dirname, `../../src/controllers/${name}.js`);
+    const Controller = path.join(__dirname, `../templates/Controller.js`);
+    const CheckController = path.join(__dirname, `../../src/controllers/${name}Controller.js`);
 
     if (fs.existsSync(CheckController)) {
         console.error(`Controller ${name} already exists at ${CheckController}`);

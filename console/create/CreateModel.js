@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 function CreateModel(name){
-    const Model = path.join(__dirname, `../../src/models/Model.js`);
-    const CheckModel = path.join(__dirname, `../../src/models/${name}.js`);
+    const Model = path.join(__dirname, `../templates/Model.js`);
+    const CheckModel = path.join(__dirname, `../../src/models/${name}Model.js`);
 
     if (fs.existsSync(CheckModel)) {
         console.error(`Model ${name} already exists at ${CheckModel}`);

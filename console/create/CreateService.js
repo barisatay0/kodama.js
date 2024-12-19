@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 function CreateService(name){
-    const Service = path.join(__dirname, `../../src/services/Service.js`);
-    const CheckService = path.join(__dirname, `../../src/services/${name}.js`);
+    const Service = path.join(__dirname, `../templates/Service.js`);
+    const CheckService = path.join(__dirname, `../../src/services/${name}Service.js`);
 
     if (fs.existsSync(CheckService)) {
         console.error(`Service ${name} already exists at ${CheckService}`);
@@ -20,7 +20,7 @@ function CreateService(name){
         .replace(/variant/g, name.toLowerCase());
 
     fs.writeFileSync(CheckService, content, 'utf-8');
-    console.log(`Success: Model ${name} created successfully at ${CheckService}`);
+    console.log(`Success: Service ${name} created successfully at ${CheckService}`);
 }
 
 module.exports = CreateService;

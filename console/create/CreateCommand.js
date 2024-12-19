@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 function CreateCommand(name) {
-    const Command = path.join(__dirname, `./Command.js`);
+    const Command = path.join(__dirname, `../templates/Command.js`);
     const CheckCommand = path.join(__dirname, `./${name}Command.js`);
 
     if (fs.existsSync(CheckCommand)) {

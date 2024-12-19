@@ -1,4 +1,4 @@
-const {variable} = require('../models');
+const {variable} = require('../../src/models');
 
 async function index() {
     return await variable.findAll();
