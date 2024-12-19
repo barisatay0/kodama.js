@@ -1,11 +1,7 @@
-const CreateController = require('./CreateController');
-const CreateModel = require('./CreateModel');
-const CreateService = require('./CreateService');
 const CreateCommand = require('./CreateCommand');
+const Create = require('./Create');
 
 module.exports = {
-    CreateController,
-    CreateModel,
-    CreateService,
     CreateCommand,
+    Create,
 };

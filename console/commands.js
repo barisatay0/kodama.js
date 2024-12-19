@@ -1,11 +1,18 @@
 #!/usr/bin/env node
-const {CreateController, CreateModel, CreateService, CreateCommand} = require('./create');
+const {Create} = require('./create');
 const args = process.argv.slice(2);
 const command = args[0];
-const subcommand = args[1];
+const type = args[1];
 const name = args[2];
 
-if (command === 'create' && subcommand === 'controller') {CreateController(name);}
-if (command === 'create' && subcommand === 'model') {CreateModel(name);}
-if (command === 'create' && subcommand === 'service') {CreateService(name);}
-if (command === 'create' && subcommand === 'command'){CreateCommand(name);}
+const valid_command = ['create'];
+const valid_type = ['controller', 'service', 'model'];
+
+if (valid_command.includes(command)) {
+    if (valid_type.includes(type)) {Create(name, type);}
+    else {
+        console.log('There is no command like this.');
+        console.log('Our command syntax is looking like "matic command type name" ');
+        console.log('Example "matic create controller Controller_name" ');
+    }
+}
