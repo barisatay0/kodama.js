@@ -3,7 +3,7 @@ const path = require('path');
 
 function CreateCommand(name) {
     const Command = path.join(__dirname, `./Command.js`);
-    const CheckCommand = path.join(__dirname, `./${name}.js`);
+    const CheckCommand = path.join(__dirname, `./${name}Command.js`);
 
     if (fs.existsSync(CheckCommand)) {
         console.error(`Command ${name} already exists at ${CheckCommand}`);
