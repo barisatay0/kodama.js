@@ -9,10 +9,6 @@ function CreateCommand(name) {
         console.error(`Command ${name} already exists at ${CheckCommand}`);
         process.exit(1);
     }
-    if (!fs.existsSync(Command)) {
-        console.error(`Example file not found: ${Command}`);
-        process.exit(1);
-    }
 
     const template = fs.readFileSync(Command, 'utf-8');
     const content = template
