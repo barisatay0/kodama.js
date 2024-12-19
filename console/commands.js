@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const {CreateController, CreateModel, CreateService, CreateCommand, CreateApi} = require('./create');
+const {CreateController, CreateModel, CreateService, CreateCommand} = require('./create');
 const args = process.argv.slice(2);
 const command = args[0];
 const subcommand = args[1];
@@ -9,4 +9,4 @@ if (command === 'create' && subcommand === 'controller') {CreateController(name)
 if (command === 'create' && subcommand === 'model') {CreateModel(name);}
 if (command === 'create' && subcommand === 'service') {CreateService(name);}
 if (command === 'create' && subcommand === 'command'){CreateCommand(name);}
-if (command === 'create' && subcommand === 'api'){CreateApi(name);}
+if (command === 'create' && subcommand === 'api') {CreateModel(name);CreateService(name);CreateController(name);}
