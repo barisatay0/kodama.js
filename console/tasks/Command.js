@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-function Createvariable(name){
+// This example is a create function
+
+function variable(name){
     const variable = path.join(__dirname, `../../src/models/variable.js`);
     const Checkvariable = path.join(__dirname, `../../src/models/${name}.js`);
 
@@ -23,4 +25,4 @@ function Createvariable(name){
     console.log(`Success: variable ${name} created successfully at ${Checkvariable}`);
 }
 
-module.exports = Createvariable;
+module.exports = variable;
