@@ -1,4 +1,4 @@
-const Create = require('./Create');
+const Create = require('./create');
 
 module.exports = {
     Create,
