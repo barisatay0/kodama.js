@@ -1,5 +1,5 @@
-const Create = require('./create');
+const apiStructure = require('./apiStructure');
 
 module.exports = {
-    Create,
+    apiStructure,
 };
