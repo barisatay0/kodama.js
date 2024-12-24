@@ -11,7 +11,6 @@ function CreateFile(type, name) {
     const content = fs.readFileSync(path.join(__dirname, `../templates/${type}.js`), 'utf-8')
         .replace(/variable/g, name)
         .replace(/variant/g, name.toLowerCase());
-
     fs.writeFileSync(filePath, content, 'utf-8');
     console.log(`Success: ${type.charAt(0).toUpperCase() + type.slice(1)} ${name} created`);
     return true;
