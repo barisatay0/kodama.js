@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-function ApiStructure(name, type) {
+function CreateApiCore(name, type) {
     const targetPath = path.join(__dirname, `../../src/${type}s/${name}.js`);
 
     if (fs.existsSync(targetPath)) return console.error(`${type} ${name} exists!`);
@@ -14,4 +14,4 @@ function ApiStructure(name, type) {
     console.log(`Success: ${type.charAt(0).toUpperCase() + type.slice(1)} ${name} created at ${targetPath}`);
 }
 
-module.exports = ApiStructure;
+module.exports = CreateApiCore;
