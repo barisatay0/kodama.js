@@ -1,15 +1,16 @@
 #!/usr/bin/env node
-const {CreateApiCore} = require('./create');
+const {CreateApi, CreateApiCore} = require('./create');
 const args = process.argv.slice(2);
 const command = args[0];
 const type = args[1];
 const name = args[2];
 
-const valid_command = ['create'];
-const valid_type = ['controller', 'service', 'model'];
 
-if (valid_command.includes(command)) {
-    if (valid_type.includes(type)) {CreateApiCore(name, type);}
+const api_cores = ['controller', 'service', 'model'];
+
+if (command === "create") {
+    if (api_cores.includes(type)) {CreateApiCore(name, type);}
+    else if (type === "api") {CreateApi(name);}
     else {
         console.log('There is no command like this.');
         console.log('Our command syntax is looking like "matic command type name" ');
