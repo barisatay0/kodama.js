@@ -3,7 +3,6 @@ const path = require('path');
 const CreateIndex = require('./CreateIndex');
 
 function CreateApiCore(name, type) {
-
     const targetPath = path.join(__dirname, `../../src/${type}s/${name}${type.charAt(0).toUpperCase() + type.slice(1)}.js`);
 
     if (fs.existsSync(targetPath)) {return console.error(`${type} ${name} exists!`);}
