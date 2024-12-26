@@ -4,16 +4,14 @@ const CreateFile = require("./CreateFile");
 
 function CreateApi(name, type) {
     let types = [`${type}`];
-    if (type === 'api') {
-        types = ['controller', 'model', 'service'];
-    }
+    if (type === 'api') {types = ['controller', 'model', 'service'];}
+
     const createdFiles = [];
     for (let currentType of types) {
         const isCreated = CreateFile(currentType, name);
 
-        if (isCreated) {
-            createdFiles.push(currentType);
-        } else {
+        if (isCreated) {createdFiles.push(currentType);}
+        else {
             console.log(`Cannot continue creation due to failure at ${currentType}`);
             createdFiles.forEach((type) => {
                 const rollbackPath = path.join(__dirname, `../../src/${type}s/${name}.js`);

@@ -6,7 +6,6 @@ function CreateIndex(name) {
         const indexPath = path.join(__dirname, '../../src/models/index.js');
 
         if (!fs.existsSync(indexPath)) {fs.writeFileSync(indexPath, `module.exports = {};\n`, 'utf-8');}
-
         const modelImport = `const { ${name} } = require('./${name}Model');\n`;
         const modelExport = `${name}`;
 

@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const CreateIndex = require("./CreateIndex");
+const CreateRoute = require("./CreateRoute");
 
 function CreateFile(type, name) {
     const filePath = path.join(__dirname, `../../src/${type}s/${name}${type.charAt(0).toUpperCase() + type.slice(1)}.js`);
@@ -11,7 +12,7 @@ function CreateFile(type, name) {
         .replace(/variant/g, name.toLowerCase());
     fs.writeFileSync(filePath, content, 'utf-8');
     console.log(`Success: ${type.charAt(0).toUpperCase() + type.slice(1)} ${name} created`);
-    if(type === 'model'){CreateIndex(name, type);}
+    if(type === 'model'){CreateIndex(name, type);CreateRoute(name, type);}
     return true;
 }
 
