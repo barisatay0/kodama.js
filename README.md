@@ -149,4 +149,3 @@ Your contributions will help make Kodama.js even better for everyone!
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the terms of the license.
 
 ---
-
