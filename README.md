@@ -110,7 +110,7 @@ Kodama.js provides a variety of commands to make API development faster and easi
 
 1. To create a controller named `UserController`:
    ```bash
-   koda create controller UserController
+   koda create controller User
    ```
 
 2. To create an entire API for `User`:
