@@ -26,7 +26,7 @@ To get started with Kodama.js, ensure you have Node.js installed on your system.
 
 1. Install Kodama.js directly from npm:
    ```bash
-   npm i kodama.js
+   npm i -g kodama.js
    ```
    
    Or clone the repository:
