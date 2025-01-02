@@ -1,57 +1,59 @@
-# Kodama.js
-
-<p align="center">
-  <img src="config/kodama.webp" width="400" alt="Kodama Logo">
+<p>
+  <img src="config/kodama.webp" alt="Kodama Logo">
 </p>
 
-**Kodama.js** is a powerful **Command-Line Interface (CLI) Tool** designed to simplify the development of Node.js, Express.js, and Sequelize-based projects. With Kodama.js, you can quickly generate essential components like services, controllers, routes, and models, streamlining your workflow and reducing repetitive tasks.
+# Kodama.js
 
----
+**Kodama.js** is a powerful **Command-Line Interface (CLI) Tool** that simplifies the development of Node.js, Express.js, and Sequelize-based projects. With Kodama.js, you can quickly generate essential components like services, controllers, routes, and models, streamlining your workflow and reducing repetitive tasks.
+
 
 ## 📖 Table of Contents
 
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Key Features](#key-features)
-- [Commands](#commands)
-- [How to Use](#how-to-use)
-- [Contributing](#contributing)
-- [License](#license)
+- [Getting Started](#-getting-started)
+- [Project Structure](#-project-structure)
+- [Key Features](#-key-features)
+- [Commands](#create-commands)
+- [How to Use](#-how-to-use)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ---
 
 ## 🚀 Getting Started
 
-To get started with Kodama.js, ensure you have Node.js installed on your system. Then, follow these steps to set up the tool:
+To get started with **Kodama.js**, ensure that Node.js is installed on your system. Follow these steps to set up the tool:
 
-1. Install Kodama.js directly from npm:
+1. **Install Kodama.js globally via npm** (Recommended):
    ```bash
    npm i -g kodama.js
    ```
-   
+   Alternatively, you can install it locally in your project:
+   ```bash
+   npm i kodama.js
+   ```
+
    Or clone the repository:
    ```bash
    git clone https://github.com/barisatay0/kodama.js.git
    ```
 
-2. Navigate to the project directory and install dependencies:
+2. Navigate to the project directory and install the dependencies:
    ```bash
    cd kodama.js
    npm install
    ```
 
-3. Link the CLI globally using the `npm link` command:
+3. If you didn't install the CLI globally, use the `npm link` command:
    ```bash
    npm link
    ```
-
-After running `npm link`, the `koda` command becomes globally available on your system, allowing you to generate API components anywhere.
+   After running `npm link`, the `koda` command becomes globally available on your system, enabling you to generate API components anywhere.
 
 ---
 
 ## 🗂️ Project Structure
 
-Below is the structure of a typical Kodama.js project:
+Here’s the structure of a typical **Kodama.js** project:
 
 ```
 app.js            # Application entry file
@@ -59,7 +61,7 @@ config            # Configuration files
 console           # Console commands
 package.json      # Dependencies and project info
 package-lock.json # Dependency lock file
-src               # Application's core code
+src               # Core application code
 sync.js           # Database synchronization
 ```
 
@@ -67,22 +69,22 @@ sync.js           # Database synchronization
 
 ## 🌟 Key Features
 
-Kodama.js is designed to boost productivity by automating repetitive tasks. Here are its main features:
+**Kodama.js** is designed to accelerate development by automating repetitive tasks. Here are some of its key features:
 
-- **CLI Tool**: Generate components quickly using simple terminal commands.
-- **Code Generator**: Automatically creates controllers, services, models, and APIs.
-- **Node.js & Express.js Integration**: Built to work seamlessly with Express.js and Sequelize for backend development.
+- **CLI Tool**: Quickly generate components using simple terminal commands.
+- **Code Generator**: Automatically create controllers, services, models, and APIs.
+- **Node.js & Express.js Integration**: Works seamlessly with Express.js and Sequelize for backend development.
 
 ### Why Use Kodama.js?
-- Saves time by reducing boilerplate code.
-- Ensures consistent project structure.
-- Simplifies API development with intuitive commands.
+- **Saves Time**: Reduces boilerplate code and repetitive tasks.
+- **Consistent Structure**: Ensures a uniform project structure across your applications.
+- **Streamlines API Development**: Simplifies the creation of APIs with intuitive commands.
 
 ---
 
-## ⚡ Commands
+## ⚡ Available Commands
 
-Kodama.js provides a variety of commands to make API development faster and easier:
+**Kodama.js** offers a variety of commands to help you build your API faster and more efficiently:
 
 ### Create Commands
 
@@ -101,14 +103,14 @@ Kodama.js provides a variety of commands to make API development faster and easi
   koda create model <model_name>
   ```
 
-- **API**: Generate a controller, service, and model file all at once:
+- **API**: Generate a controller, service, and model file at once:
   ```bash
   koda create api <api_name>
   ```
 
 ### Example Usage
 
-1. To create a controller named `UserController`:
+1. To create a controller called `UserController`:
    ```bash
    koda create controller User
    ```
@@ -118,34 +120,34 @@ Kodama.js provides a variety of commands to make API development faster and easi
    koda create api User
    ```
    This will generate the following files:
-   - `UserController.js`
-   - `UserService.js`
-   - `UserModel.js`
+    - `UserController.js`
+    - `UserService.js`
+    - `UserModel.js`
 
 ---
 
 ## 🎯 How to Use
 
-1. **Setup**: Complete the setup process by following the [Getting Started](#getting-started) section.
-2. **Generate Components**: Use `koda create` commands to generate the desired components (controller, service, model, or API).
-3. **Develop Faster**: Use the generated boilerplate code as a foundation and focus on the core logic of your application.
+1. **Setup**: Follow the steps in the [Getting Started](#-getting-started) section to install Kodama.js.
+2. **Generate Components**: Use the `koda create` commands to generate the components you need (controller, service, model, or API).
+3. **Develop Faster**: Leverage the generated boilerplate code to focus on building the core logic of your application.
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions to Kodama.js! If you have ideas for improvements or want to fix bugs, feel free to:
+We welcome contributions to **Kodama.js**! If you have ideas for new features or fixes, here’s how you can contribute:
 
 1. Fork the repository.
 2. Create a new branch for your changes.
-3. Submit a pull request with a detailed explanation of your updates.
+3. Submit a pull request with a detailed description of your updates.
 
-Your contributions will help make Kodama.js even better for everyone!
+Your contributions help make **Kodama.js** better for everyone!
 
 ---
 
 ## 📜 License
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the terms of the license.
+This project is licensed under the [MIT License](https://opensource.org/license/MIT). Feel free to use, modify, and distribute it according to the terms of the license.
 
 ---
