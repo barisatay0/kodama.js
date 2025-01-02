@@ -4,7 +4,7 @@
 
 # Kodama.js
 
-**Kodama.js** is a powerful **Command-Line Interface (CLI) Tool** that simplifies the development of Node.js, Express.js, and Sequelize-based projects. With Kodama.js, you can quickly generate essential components like services, controllers, routes, and models, streamlining your workflow and reducing repetitive tasks.
+**Kodama.js** is a swift **Command-Line Interface (CLI) Tool** that simplifies the development of Node.js, Express.js, and Sequelize-based projects. With Kodama.js, you can quickly generate essential components like services, controllers, routes, and models, streamlining your workflow and reducing repetitive tasks.
 
 
 ## 📖 Table of Contents
