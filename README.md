@@ -1,5 +1,5 @@
-<p>
-  <img src="config/kodama.webp" alt="Kodama Logo">
+<p align="center">
+  <img src="config/kodama.webp" width="400" alt="Kodama Logo">
 </p>
 
 # Kodama.js
